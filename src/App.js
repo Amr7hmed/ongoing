@@ -10,7 +10,7 @@ function App() {
       <Router>
         <Navbar/>
         <Switch>
-          <Route path="/" component={Home} exact />
+          <Route path="/" component={Home} />
         </Switch>
       </Router>
       <Footer />
