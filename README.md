@@ -6,6 +6,9 @@
   - src/components for other react components.
   - src/pages for router pages.
 ---
+## Live
+
+[Preview Live](https://amr7hmed.github.io/ongoing/)
 
 ## How to run loacaly
 
