@@ -1,5 +1,6 @@
 {
-  "name": "https://github.com/Amr7hmed/ongoing/",
+  "homepage": "https://Amr7hmed.github.io/ongoing/",
+  "name": "ongoing_interview",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
