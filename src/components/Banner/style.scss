@@ -1,0 +1,21 @@
+/* 
+    A- Style Section Main .
+    B- Style Media Queries In The Max Width ("576px").
+ */
+// A- Style Section Main
+.main__cover {
+  width: 100%;
+  height: 500px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// B- Style Media Queries In The Max Width ("576px").
+@media screen and(max-width: 576px) {
+  .main__cover {
+    width: 100%;
+    height: 400px;
+  }
+}

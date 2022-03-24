@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+/* 
+    A- Variables Styles .
+    B- Style Section Form .
+        B- 1- Style Section Form File .
+        B- 2- Style Section Form Request .
+        B- 3- Style Section Form Upload .
+    E- Media Queries . 
+        E- 1-Style Media Queries In The Max Width ("992px").
+        E- 2-Style Media Queries In The Max Width ("576px").
+ */
+// A- Variables Styles
+// Palette Color
+:root {
+  --primary-color: #124c64;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --orange-color: #e38519;
+}
+// Palette Fonts
+$font_12: 12px;
+$font_13: 13px;
+$font_14: 14px;
+$font_18: 18px;
+$font-opensans: "Open Sans", sans-serif;
+
+.form {
+  // B- 1- Style Section Form File .
+  &__file {
+    // B- 2- Style Section Form Request .
+    &__request {
+      h4 {
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--primary-color);
+        margin-bottom: 30px;
+      }
+      li {
+        margin: 20px 0;
+        input.form-check-input {
+          border: 4px solid #707070;
+          width: 15px;
+          height: 15px;
+          margin-right: 10px;
+        }
+
+        label.form-check-label {
+          font-size: $font_14;
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    // B- 3- Style Section Form Upload .
+    &__upload {
+      width: 500px;
+      float: right;
+      .upload,
+      .service {
+        width: 100%;
+      }
+      //upload
+      .upload {
+        h4 {
+          font-size: 18px;
+          font-weight: bold;
+          color: var(--primary-color);
+          margin-bottom: 30px;
+        }
+        .upload__file {
+          width: 500px;
+          height: 185px;
+          background-color: var(--white-color);
+          border-radius: 10px;
+          padding: 10px;
+          position: relative;
+          .file-upload {
+            position: absolute;
+            z-index: 2;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            text-align: center;
+            color: #757575;
+            input {
+              display: none;
+            }
+            label {
+              display: block;
+              span {
+                font-size: 30px;
+              }
+            }
+            span {
+              font-size: 12px;
+            }
+          }
+          .file__list {
+            position: absolute;
+            width: 95%;
+            bottom: 18px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .item {
+              background-color: var(--primary-color);
+              height: 34px;
+              width: 152px;
+              border-radius: 5px;
+              text-align: center;
+              line-height: 34px;
+              color: var(--white-color);
+              span {
+                font-size: $font_12;
+                &:first-of-type {
+                  font-size: $font_18;
+                  display: inline-block;
+                  margin-right: 15px;
+                }
+              }
+
+              button {
+                width: 20px;
+                height: 20px;
+                font-size: $font_14;
+                line-height: 20px;
+                border: none;
+                outline: none;
+                margin: 7px 0px 7px 30px;
+                border-radius: 50%;
+                color: var(--orange-color);
+              }
+            }
+          }
+        }
+      }
+      //service
+      .service {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        .service__item {
+          width: 340px;
+          height: 88px;
+          background-color: #e2dada;
+          border-radius: 10px;
+          p {
+            margin: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--primary-color);
+            span {
+              font-weight: 200;
+              &:first-of-type {
+                text-decoration: line-through;
+              }
+            }
+          }
+        }
+        .addcart {
+          width: 148px;
+          height: 42px;
+          background-color: var(--orange-color);
+          color: var(--white-color);
+          border-radius: 5px;
+          text-align: center;
+          line-height: 42px;
+          font-size: $font_14;
+          font-weight: bold;
+          text-transform: uppercase;
+          span {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// E- 1-Style Media Queries In The Max Width ("992px")
+@media screen and(max-width: 992px) {
+  .form {
+    // file
+    &__file {
+      width: 95%;
+      margin: 0 auto;
+      &__request {
+        margin: 20px 0;
+        border-top: 1px solid #e2e0e0;
+        border-bottom: 1px solid #e2e0e0;
+        padding: 25px 0;
+      }
+      // file upload
+      &__upload {
+        margin: 20px 0;
+        padding: 25px 0;
+        width: 500px;
+        float: none;
+      }
+    }
+  }
+}
+// E- 2-Style Media Queries In The Max Width ("576px").
+@media screen and(max-width: 576px) {
+  .form {
+    // file
+    &__file {
+      // file upload
+      &__upload {
+        width: 100%;
+        float: right;
+        .upload,
+        .service {
+          width: 100%;
+        }
+        //upload
+        .upload {
+          h4 {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+          }
+          .upload__file {
+            width: 90%;
+            height: 300px;
+            .file__list {
+              position: absolute;
+              width: 95%;
+              bottom: 18px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+              .item {
+                width: 192px;
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+        //service
+        .service {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 30px;
+          .service__item {
+            width: 100%;
+            margin-bottom: 10px;
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

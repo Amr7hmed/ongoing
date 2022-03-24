@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+/* 
+    A- Variables Styles .
+    B- Style Bottom Navbar .
+        B- 1- Style Bottom Navbar Brand.
+        B- 2- Style Bottom Navbar Collapse.
+    E- Style NavBar Component To Media Queries In The Max Width ("992px").
+ */
+// A- Variables Styles
+// Palette Color
+:root {
+  --primary-color: #124c64;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --orange-color: #e38519;
+}
+// Palette Fonts
+$font_12: 12px;
+$font_13: 13px;
+$font_14: 14px;
+$font_18: 18px;
+$font-opensans: "Open Sans", sans-serif;
+
+//B- Style Bottom Navbar .
+.bottom__navbar {
+  background-color: var(--white-color);
+  border: 1px solid #70707026;
+  height: 98px;
+  font-family: $font-opensans;
+  // B- 1- Style Bottom Navbar Brand.
+  .navbar-brand {
+    img {
+      width: 220px;
+      height: 32px;
+    }
+  }
+  // B- 2- Style Bottom Navbar Collapse.
+  .navbar-collapse {
+    overflow: hidden;
+    ul.navbar-nav {
+      float: left;
+      li.nav-item {
+        a {
+          text-transform: uppercase;
+          color: var(--primary-color);
+          font-size: $font_14;
+          font-weight: bold;
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+        margin: 0 15px;
+      }
+    }
+    .account {
+      float: right;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      width: 205px;
+      height: 98px;
+      &__icon {
+        width: 33px;
+        height: 33px;
+        background-color: #edeff2;
+        border-radius: 50%;
+        color: #707070;
+        line-height: 33px;
+        text-align: center;
+        display: inline-block;
+        margin-right: 15px;
+      }
+      &__login {
+        span {
+          text-align: left;
+          display: block;
+          color: #0f0f0f;
+          font-size: $font_14;
+          font-weight: bold;
+          margin-bottom: -5px;
+        }
+        a {
+          font-size: 11px;
+          color: #474646;
+        }
+        a.active {
+          color: var(--orange-color);
+        }
+      }
+    }
+  }
+}
+
+// E-Style NavBar Component To Media Queries In The Max Width ("992px").
+@media screen and(max-width: 992px) {
+  .bottom__navbar {
+    position: relative;
+    .navbar-collapse {
+      overflow: hidden;
+      position: absolute;
+      top: 97px;
+      left: 0;
+      background-color: var(--white-color);
+      padding-left: 15px;
+      width: 100%;
+      border: 1px solid #70707026;
+      border-top: none;
+      z-index: 10;
+      ul.navbar-nav {
+        float: none;
+        li.nav-item {
+          a {
+            margin: 10px 0;
+          }
+        }
+      }
+      .account {
+        float: none;
+        justify-content: flex-start;
+        padding-left: 15px;
+      }
+    }
+  }
+}

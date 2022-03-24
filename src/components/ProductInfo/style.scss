@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+/* 
+    A- Variables Styles .
+    B- Style Product Component .
+        B- 1- Style Product Component Registration.
+        B- 2- Style Product Component Info .
+    E- Media Queries . 
+        E- 1-Style Product Component To Media Queries In The Max Width ("1200px").
+        E- 2- Style Product Component To Media Queries In The Max Width ("576px").
+ */
+// A- Variables Styles
+// Palette Color
+:root {
+  --primary-color: #124c64;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --orange-color: #e38519;
+}
+// Palette Fonts
+$font_12: 12px;
+$font_13: 13px;
+$font_14: 14px;
+$font_18: 18px;
+$font-opensans: "Open Sans", sans-serif;
+// B- Style Product Component .
+.product {
+  margin: 60px 0;
+  height: 315px;
+  font-family: $font-opensans;
+  // B- 1- Style Product Component Registration .
+  &__registration {
+    background-color: var(--primary-color);
+    width: 541px;
+    height: 226px;
+    color: var(--white-color);
+    padding: 15px 15px 10px 15px;
+    margin: 44px auto;
+    h3 {
+      font-size: 35px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 17px;
+      font-weight: 200;
+      width: 90%;
+      &:last-of-type {
+        font-weight: bold;
+        span {
+          font-weight: 200;
+          &:first-of-type {
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+  // B- 2- Style Product Component Info .
+  &__info {
+    width: 565px;
+    height: 315px;
+    overflow: hidden;
+    p {
+      font-size: 22px;
+      &:first-of-type {
+        font-weight: bold;
+      }
+      &:last-of-type {
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+// E- 1-Style Product Component To Media Queries In The Max Width ("1200px").
+@media screen and(max-width: 1200px) {
+  .product {
+    height: auto;
+    &__registration {
+      margin: 44px auto;
+    }
+    &__info {
+      margin: 0 auto;
+    }
+  }
+}
+// E- 2- Style Product Component To Media Queries In The Max Width ("576px").
+@media screen and(max-width: 576px) {
+  .product {
+    margin: 30px 0;
+    height: auto;
+    &__registration {
+      margin: 25px auto 25px auto;
+      width: auto;
+      height: auto;
+      h3 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 16px;
+        &:last-of-type {
+          font-weight: 600;
+          span {
+            font-weight: 200;
+            &:first-of-type {
+              text-decoration: line-through;
+            }
+          }
+        }
+      }
+    }
+    &__info {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: auto;
+      height: auto;
+      p {
+        font-size: 18px;
+        &:first-of-type {
+          font-weight: 600;
+        }
+        &:last-of-type {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
